@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allbase — Links</title>
+    <meta name="description"
+        content="Todos los links de Allbase en un solo lugar. Plataforma de gestión empresarial inteligente." />
+    <meta property="og:title" content="Allbase — Links" />
+    <meta property="og:description" content="Plataforma de gestión empresarial inteligente." />
+    <meta property="og:image" content="/logo.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Allbase — Links" />
+    <link rel="icon" href="/logo.png" type="image/png" />
+</head>
+
+<body>
+
+    <!-- Cursor glow -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Animated background -->
+    <div class="bg-canvas">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="bg-orb bg-orb-4"></div>
+        <div class="bg-grid"></div>
+    </div>
+
+    <!-- Floating particles -->
+    <div class="particles" id="particles"></div>
+
+    <!--
+    TWO-LAYER LAYOUT:
+    .robot-sticky-wrap  → sticky, z-index LOW  (robot stays "behind" cards)
+    .cards-scene        → normal flow, z-index HIGH (cards scroll over robot)
+    Both are siblings inside .page-wrapper, NOT inside a transformed parent.
+    The 3D tilt is applied only to #cards-column, avoiding the sticky bug.
+  -->
+    <div class="page-wrapper">
+
+        <!-- ── LAYER 1: Robot (sticky, behind cards) ── -->
+        <div class="robot-sticky-wrap" id="robot-sticky-wrap">
+            <div class="robot-avatar" id="robot-avatar">
+
+                <!-- Antenna -->
+                <div class="robot-antenna">
+                    <div class="robot-antenna-ball"></div>
+                    <div class="robot-antenna-stem"></div>
+                </div>
+
+                <!-- Head -->
+                <div class="robot-head">
+                    <div class="robot-ear robot-ear--left">
+                        <div class="robot-ear-dot"></div>
+                        <div class="robot-ear-dot"></div>
+                    </div>
+
+                    <!-- Unicejo -->
+                    <div class="robot-eye-socket" id="eye-socket">
+                        <div class="robot-eye-iris" id="eye-iris">
+                            <img src="/logo.png" alt="Allbase" id="logo-img" />
+                        </div>
+                        <div class="robot-eye-glare"></div>
+                    </div>
+
+                    <div class="robot-ear robot-ear--right">
+                        <div class="robot-ear-dot"></div>
+                        <div class="robot-ear-dot"></div>
+                    </div>
+                </div>
+
+                <!-- Neck -->
+                <div class="robot-neck">
+                    <div class="robot-neck-segment"></div>
+                    <div class="robot-neck-segment"></div>
+                    <div class="robot-neck-segment"></div>
+                </div>
+
+                <!-- Body panel -->
+                <div class="robot-body-panel">
+                    <h1 class="brand-name" id="brand-name">Allbase</h1>
+                    <p class="tagline" id="tagline">Plataforma de gestión empresarial inteligente.</p>
+                </div>
+
+            </div><!-- /robot-avatar -->
+        </div><!-- /robot-sticky-wrap -->
+
+        <!-- ── LAYER 2: Cards (scroll over robot, 3D tilt here) ── -->
+        <div class="cards-scene">
+            <div class="cards-column" id="cards-column">
+                <div id="links-container"></div>
+            </div>
+        </div>
+
+    </div><!-- /page-wrapper -->
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <img class="footer-logo" src="/logo.png" alt="Allbase" />
+        <p class="footer-copy">© 2025 Allbase · Todos los derechos reservados</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
