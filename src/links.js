@@ -2,7 +2,7 @@ export const profile = {
     name: 'Allbase',
     tagline: 'Plataforma de gestión empresarial inteligente.',
     logo: '/logo.png',
-    year: 2025,
+    year: 2026,
 }
 
 export const sections = [
@@ -53,8 +53,8 @@ export const sections = [
             {
                 id: 'facebook',
                 name: 'Facebook',
-                handle: 'All Base',
-                href: 'https://facebook.com/allbase',
+                handle: 'Allbase en Facebook',
+                href: 'https://www.facebook.com/profile.php?id=61587205153989',
                 color: '#9b3dff',
             },
         ],
